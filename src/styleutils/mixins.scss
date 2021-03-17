@@ -1,0 +1,12 @@
+@mixin fontOswald($weight, $size) {
+  font-family: "Oswald", sans-serif;
+  font-weight: $weight !important;
+  font-size: $size !important;
+  color: #000000;
+}
+@mixin fontSans($weight, $size) {
+  font-family: "Work Sans", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: #a3a0a0;
+}

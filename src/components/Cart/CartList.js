@@ -1,11 +1,7 @@
-import React from 'react'
-import CartItem from './CartItem';
+import React from "react";
+import CartItem from "./CartItem";
 const CartList = () => {
-    return (
-        <div className="container-fluid">
-            <CartItem></CartItem>
-        </div>
-    )
-}
+  return <CartItem />;
+};
 
-export default CartList
+export default CartList;

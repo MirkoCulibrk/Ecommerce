@@ -1,12 +1,18 @@
 import React from "react";
 import CartColumns from "./CartColumns";
-import CartList from './CartList';
+import CartList from "./CartList";
+import CartTotal from "./CartTotal";
+import NavBar from "../NavBar";
 const Cart = () => {
   return (
-    <section>
-      <CartColumns />
-      <CartList></CartList>
-    </section>
+    <React.Fragment>
+      <NavBar />
+      <section className="container cart">
+        <CartColumns />
+        <CartList />
+        <CartTotal />
+      </section>
+    </React.Fragment>
   );
 };
 

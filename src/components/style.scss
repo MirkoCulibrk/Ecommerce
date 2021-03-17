@@ -1,0 +1,29 @@
+@import "../styleutils/mixins.scss";
+.navbar {
+  .toggle {
+    border-color: transparent !important;
+  }
+  .navbar-toggler-icon {
+  }
+  #logo {
+    @include fontSans(700, 0.8rem);
+    color: #000;
+    margin-bottom: 0;
+  }
+  .cart-container {
+    position: relative;
+    .count-container {
+      position: absolute;
+      top: 0;
+      left: 12px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: var(--mainColor);
+      .count {
+        @include fontSans(400, 0.7rem);
+        color: #fff;
+      }
+    }
+  }
+}
