@@ -7,8 +7,8 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <React.Fragment>
-      <NavBar></NavBar>
-      <Detail></Detail>
+      <NavBar />
+      <Detail />
     </React.Fragment>
   );
 }

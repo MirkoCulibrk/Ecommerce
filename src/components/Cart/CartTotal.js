@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../../ui/Button";
 const CartTotal = () => {
   return (
     <div className="row d-flex justify-content-end cart-total align-items-center">
