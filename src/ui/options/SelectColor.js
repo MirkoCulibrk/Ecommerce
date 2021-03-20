@@ -8,7 +8,6 @@ class SelectOption extends React.Component {
     type: this.props.type
   };
   dropDown = () => {
-    console.log(this.state.items, this.state.type);
     this.setState(prevState => ({
       showItems: !prevState.showItems
     }));
@@ -23,7 +22,6 @@ class SelectOption extends React.Component {
     let options;
     if (this.state.type === "numbers") {
       options = this.state.items.map(item => {
-        console.log(this.state);
         return (
           <div
             key={item}
@@ -77,7 +75,7 @@ class SelectOption extends React.Component {
             </div>
             <div
               className={`select-box--selected-item text-uppercase ${
-                this.state.type === "colors" ? "color" : ""
+                this.state.type === "colors" ? "text text--padding" : " text"
               }`}
             >
               {this.state.selectedItem}

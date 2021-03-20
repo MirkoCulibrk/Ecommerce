@@ -1,6 +1,7 @@
 @import "../../styleutils/mixins.scss";
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
 .text {
+  display: flex;
   justify-content: center;
   flex-direction: column;
   h1 {
@@ -26,35 +27,31 @@
     }
   }
 }
-.img-container {
-  display: flex;
-  justify-content: center;
-  img {
-    max-width: 350px;
-  }
-}
-.smallimg-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 50px;
-  .smallimg {
-    margin-right: 35px;
-    img {
-      width: 60px;
-      height: 60px;
-    }
-  }
-}
 
 //slider
-.thumbnail-slider-wrap {
-  margin-top: 15px;
-  height: 85px;
-}
-.thumbnail-slider-wrap .slick-track .slick-slide {
-  text-align: center;
-}
-.thumbnail-slider-wrap .slick-track .slick-slide img {
-  width: 70%;
+.gallery-container {
+  .thumbnail-slider-wrap {
+    margin-top: 15px;
+    height: 85px;
+  }
+  .thumbnail-slider-wrap .slick-track .slick-slide {
+    text-align: center;
+  }
+  .thumbnail-slider-wrap .slick-track .slick-slide img {
+    width: 70%;
+  }
+  .image-gallery-thumbnail.active,
+  .image-gallery-thumbnail:hover,
+  .image-gallery-thumbnail:focus {
+    border-color: var(--mainColor) !important;
+  }
+  .image-gallery-svg {
+    color: var(--mainColor) !important;
+  }
+  .image-gallery-thumbnails {
+    margin-top: 25px;
+  }
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-width: 350px !important;
+  }
 }

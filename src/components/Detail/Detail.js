@@ -1,15 +1,14 @@
 import React from "react";
 import "./detail.scss";
-import SelectOption from "../../ui/options/SelectOption";
+import SelectOption from "../../ui/options/SelectColor";
 import Button from "../../ui/Button";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import Gallery from './Slider';
+import Gallery from "./Gallery";
 class Detail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorite: false,
-      
+      favorite: false
     };
   }
   submitHandle = e => {
@@ -25,8 +24,13 @@ class Detail extends React.Component {
     const colors = ["red", "blue", "purple"];
     return (
       <div className="container">
-        <div className="row ">
-          <div className="col-lg-6 text d-flex ">
+        <div className="row d-flex flex-row-reverse">
+          <div className="col-lg-6 col-md-12">
+            <div className="gallery-container">
+              <Gallery />
+            </div>
+          </div>
+          <div className="col-lg-6 text col-md-12">
             <h1 className="text-uppercase">Beats Solo3 wireless</h1>
             <div className="star-container" />
             <p>
@@ -49,9 +53,6 @@ class Detail extends React.Component {
             </form>
           </div>
           {/* end of col-lg-6 */}
-          <div className="col-lg-6">
-            <Gallery></Gallery>
-        </div>
         </div>
       </div>
     );
