@@ -5,12 +5,11 @@
   justify-content: center;
   flex-direction: column;
   h1 {
-    @include fontOswald(700, 2.75rem);
+    @include fontOswald(700, 2.75rem,#000);
   }
   p {
-    @include fontSans(400, 1rem);
+    @include fontSans(400, 1rem,#000);
     max-width: 450px;
-    color: #000;
   }
   #form {
     display: flex;

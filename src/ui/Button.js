@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.scss";
-const Button = ({ text, type }) => {
+const Button = ({ text, type,isDefault }) => {
   return (
-    <button className={`btn btn-default text-uppercase ${type}`}>{text}</button>
+    <button className={`btn ${isDefault?'btn-default':''} text-uppercase ${type}`}>{text}</button>
   );
 };
 

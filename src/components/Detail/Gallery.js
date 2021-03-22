@@ -16,8 +16,8 @@ const images = [
     thumbnail: "https://picsum.photos/id/1019/250/150/"
   }
 ];
-const Gallery = () => {
-  return <ImageGallery items={images} showNav={false} showPlayButton={false} />;
+const Gallery = ({ nav }) => {
+  return <ImageGallery items={images} showNav={nav} showPlayButton={false} />;
 };
 
 export default Gallery;

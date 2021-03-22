@@ -10,6 +10,14 @@ const config={
       filename: 'bundle.[hash].js',
       path: path.resolve(__dirname, 'dist')
     },
+    resolve:{
+      alias: {
+        components:path.resolve(__dirname,'src/components'),
+        styleutils:path.resolve(__dirname,'src/styleutils'),
+        img:path.resolve(__dirname,'src/img'),
+        ui:path.resolve(__dirname,'src/ui')
+      }
+    },
     plugins:[new HtmlWebpackPlugin({ template: "./src/index.html" })],
     module:{
       rules:[
@@ -24,7 +32,7 @@ const config={
           }
         },
         {
-          test:/\.(scss)$/i,
+          test:/\.(scss|css)$/i,
           use: [{
             loader: 'style-loader', 
           }, {
@@ -33,18 +41,7 @@ const config={
             loader: 'sass-loader' // compiles Sass to CSS
           }]
         },
-        {
-          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'fonts/'
-              }
-            }
-          ]
-        },
+        { test: /\.(png|woff|woff2|eot|ttf|svg)$/, use: ['url-loader?limit=100000'] },
         {
           test: /\.(png|jpg|gif)$/i,
           use: [

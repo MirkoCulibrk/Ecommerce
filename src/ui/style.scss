@@ -3,9 +3,18 @@
 .btn-default {
   background: #000;
   border-radius: 0;
-  @include fontOswald(400, 0.8rem);
-  color: #fff;
+  @include fontOswald(400, 0.8rem,#fff);
   padding: 0.3rem 2.3rem;
+}
+.btn-show{
+  border:2px solid #fff;
+  border-radius: 0;
+  @include fontOswald(400,0.8rem,#fff);
+  max-width: 120px;
+  &:hover{
+    color:#fff;
+    border-radius: 5px;
+  }
 }
 // select Component
 .select-box {
@@ -20,7 +29,7 @@
     position: relative;
     padding: 0.3rem 0.8rem;
     .text {
-      @include fontOswald(400, 0.9rem);
+      @include fontOswald(400, 0.9rem,#fff);
       &--padding {
         padding-left: 1.5rem;
       }
@@ -37,7 +46,7 @@
     display: flex;
     flex-direction: column;
     .option {
-      @include fontOswald(400, 0.9rem);
+      @include fontOswald(400, 0.9rem,#fff);
     }
     div {
       padding: 0.3rem 0.8rem;

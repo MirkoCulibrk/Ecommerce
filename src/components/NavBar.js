@@ -39,7 +39,7 @@ const NavBar = () => {
         </div>
 
         <a className="navbar-brand mx-auto" href="#">
-          <h5 id="logo" className="text-uppercase">
+          <h5 id="logo" className={`text-uppercase`}>
             global shop
           </h5>
         </a>
