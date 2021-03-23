@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Main from './components/Main';
 import "./style.scss";
-import Main from "./components/Banner/Banner";
+
 function App() {
-  return <Main />;
+  return <Main></Main>;
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));

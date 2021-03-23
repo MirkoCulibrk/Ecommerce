@@ -1,8 +1,6 @@
 import React from "react";
 import "../style.scss";
 import NavBar from "../NavBar";
-import picture from "../../img/big.png";
-import Gallery from "../Detail/Gallery";
 import MainSlider from "./MainSlider";
 const Banner = () => {
   return (

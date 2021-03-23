@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const config={
-    entry: path.resolve(__dirname) + '/src/app.js',
+    entry: path.resolve(__dirname) + '/src/App.js',
     output: {
       filename: 'bundle.[hash].js',
       path: path.resolve(__dirname, 'dist')
