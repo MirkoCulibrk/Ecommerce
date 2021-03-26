@@ -5,9 +5,8 @@ export default class Main extends Component {
   render() {
     return (
       <React.Fragment>
-
-        <Banner></Banner>
-        <Products></Products>
+        <Banner />
+        <Products />
       </React.Fragment>
     );
   }

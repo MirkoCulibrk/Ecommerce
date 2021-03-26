@@ -1,5 +1,7 @@
 @import "../styleutils/mixins.scss";
-
+.row {
+  width: 100% !important;
+}
 .navbar {
   .toggle {
     border-color: transparent !important;
@@ -120,6 +122,35 @@
 #products {
   margin-top: 75px;
   margin-bottom: 100px;
+  //filter
+  .filter-container {
+    margin-bottom: 25px;
+    .active {
+      color: #000;
+    }
+    &--title {
+      display: flex;
+      flex-direction: row;
+      h4 {
+        @include fontOswald(700, 1rem, #909090);
+      }
+    }
+    &--arrows {
+      position: relative;
+      top: -5px;
+      left: 10px;
+    }
+    &--items {
+      flex-direction: column;
+      a {
+        cursor: pointer;
+      }
+      &-item {
+        @include fontOswald(700, 1rem, #909090);
+        margin: 5px 0;
+      }
+    }
+  }
   .sorting {
     h1 {
       @include fontOswald(700, 3rem, #000);
@@ -129,6 +160,7 @@
   .items {
     .filter-sort {
       margin-bottom: 50px;
+      max-height: 23px;
       h4 {
         @include fontOswald(400, 0.9rem, #000);
         margin: 0 10px 0 0;
@@ -140,6 +172,20 @@
         // border: 1px solid #909090;
       }
     }
+    .showLayout-container {
+      a {
+        height: 25px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .showLayout-icon {
+        color: #bebcbc;
+      }
+      .active {
+        color: #000;
+      }
+    }
+    // product grid
     .img-container {
       img {
         width: 100%;
@@ -156,10 +202,30 @@
         margin-bottom: 10px;
       }
       &--info {
+        justify-content: space-between;
+        align-items: center;
         h6 {
           @include fontOswald(700, 1rem, var(--mainColor));
+          margin: 0;
         }
       }
+      &--stars-container {
+        display: flex;
+      }
+    }
+  }
+
+  //product list
+  .list {
+    margin: 25px 0;
+    .img-container {
+      max-width: 150px;
+      img {
+        width: 100%;
+      }
+    }
+    .info-container {
+      margin-left: 50px;
     }
   }
 }

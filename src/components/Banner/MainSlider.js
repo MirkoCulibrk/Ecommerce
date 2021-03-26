@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import Swiper from "swiper";
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-import Button from 'ui/Button';
-import 'swiper/swiper-bundle.css';
+import SwiperCore, { Navigation, Pagination } from "swiper/core";
+import Button from "ui/Button";
+import "swiper/swiper-bundle.css";
 import "../style.scss";
 import pic from "img/pic.png";
 SwiperCore.use([Navigation, Pagination]);
 export default class MainSlider extends Component {
-    constructor(props){
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     this.swiper = new Swiper(".swiper-container", {
       grabCursor: true,
@@ -20,9 +20,9 @@ export default class MainSlider extends Component {
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          },
+        renderBullet: function(index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        }
       },
       navigation: {
         nextEl: ".swiper-button-next", // arrows on the side of the slides
@@ -31,7 +31,7 @@ export default class MainSlider extends Component {
     });
   }
   render() {
-      console.log(pic)
+    console.log(pic);
     return (
       <div className="swiper-container">
         <div className="swiper-wrapper">
@@ -43,7 +43,7 @@ export default class MainSlider extends Component {
                   Get the most out of your music with an award-winning,
                   emotionally charged Beats listening experience.
                 </p>
-                <Button type={"btn-show"}  text={"show item"} />
+                <Button type={"btn-show"} text={"show item"} />
               </div>
               <div className="col-lg-6 banner--img">
                 <img src={pic} alt="pic" />
@@ -58,7 +58,7 @@ export default class MainSlider extends Component {
                   Get the most out of your music with an award-winning,
                   emotionally charged Beats listening experience.
                 </p>
-                <Button type={"btn-show"}  text={"show item"} />
+                <Button type={"btn-show"} text={"show item"} />
               </div>
               <div className="col-lg-6 banner--img">
                 <img src={pic} alt="pic" />

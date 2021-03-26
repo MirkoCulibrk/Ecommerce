@@ -4,8 +4,7 @@
 }
 .column {
   p {
-    @include fontSans(700, 0.9rem);
-    color: #bbbbbb;
+    @include fontSans(700, 0.9rem, #bbbbbb);
   }
 }
 .item {
@@ -22,15 +21,15 @@
     }
     h3 {
       width: 100%;
-      @include fontOswald(700, 1rem);
+      @include fontOswald(700, 1rem, #000);
     }
     p {
-      @include fontSans(400, 0.85rem);
+      @include fontSans(400, 0.85rem, #000);
     }
   }
   .span,
   strong {
-    @include fontOswald(700, 1rem);
+    @include fontOswald(700, 1rem, #000);
   }
   .btn {
     padding: 0 0.5rem !important;
@@ -38,15 +37,14 @@
   }
   .btn-controls {
     .btn-black {
-      @include fontOswald(700, 1rem);
+      @include fontOswald(700, 1rem, #000);
       font-size: 1.1rem;
     }
   }
 }
 .cart-total {
   .total-text {
-    @include fontOswald(700, 1rem);
-    color: #909090;
+    @include fontOswald(700, 1rem, #909090);
     vertical-align: middle;
     margin: 0 15px 0 0;
   }
@@ -54,7 +52,7 @@
     font-size: 1rem;
   }
   .price {
-    @include fontOswald(700, 1.875rem);
+    @include fontOswald(700, 1.875rem, #000);
     margin: 0;
   }
 }
